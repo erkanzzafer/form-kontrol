@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+<form action ="deneme.php" method="get" id="form" name="form">
+<table>
+	<tr>
+		<th colspan="3">Üyelik Formu</th>
+	</tr>
+	<tr>
+		<td>Kullanıcı Adı</td>
+		<td>:</td>
+		<td><input type="text" id="kullaniciAdi" name="kullaniciAdi"></td>
+	</tr>
+
+	<tr>
+		<td>Kullanıcı Şifresi</td>
+		<td>:</td>
+		<td><input type="text" id="kullaniciSifresi" name="kullaniciSifresi"></td>
+	</tr>
+
+	<tr>
+		<td>Kullanıcı Şifresi Tekrar</td>
+		<td>:</td>
+		<td><input type="text" id="kullaniciSifresiTekrar" name="kullaniciSifresiTekrar"></td>
+	</tr>
+
+	<tr>
+		<td>Email Adresi</td>
+		<td>:</td>
+		<td><input type="text" id="email" name="email" required></td>
+	</tr>
+
+	<tr>
+		<td>Cinsiyet</td>
+		<td>:</td>
+		<td><input type="radio" id="cinsiyet1" name="cinsiyet" value="erkek">Erkek
+			<input type="radio" id="cinsiyet2" name="cinsiyet" value="kadın">Kadın</td>
+	</tr>
+	<tr>
+		<td>Hobiler</td>
+		<td>:</td>
+		<td>
+			<input type="checkbox" id=hobiler1 name="hobiler" value="Alışveriş"> Alışveriş
+			<input type="checkbox" id=hobiler2 name="hobiler" value="Gezmek"> Gezmek
+			<input type="checkbox" id=hobiler3 name="hobiler" value="Müzik"> Müzik
+		</td>
+	</tr>
+
+	<tr>
+		<td>Not</td>
+		<td>:</td>
+		<td><textarea id="kulanicinotu" name="kulanicinotu"></textarea></td>
+	</tr>
+	<tr>
+		<td colspan="3" style="text-align: center;">
+			<input type="button" value="Gönder" onclick="formKontrol()" name="">
+		</td>
+	</tr>
+</table>
+</form>
+
+
+
+<script type="text/javascript">
+	
+	function formKontrol(){
+
+		if(document.getElementById("kullaniciAdi").value==""){
+			alert("asd");
+			document.form.kullaniciAdi.focus();
+			return;
+		}
+
+		if(document.getElementById("email").value!="" && document.getElementById("email").value.indexOf("@",0)==-1 ||  document.getElementById("email").value.indexOf(".",0)==-1 ) {
+				alert("email !!");
+				document.form.email.value="";
+				document.form.email.focus();
+				return;
+			}
+
+			
+		
+
+
+		//document.form.submit();
+	}
+
+
+
+
+</script>
+
+
+</body>
+</html>
